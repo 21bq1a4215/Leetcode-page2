@@ -1,0 +1,15 @@
+class Solution:
+    def numberOfChild(self, n: int, k: int) -> int:
+        flag=True
+        position=0
+ 
+        for i in range(k):
+            if flag:
+                position+=1
+                if position==n-1:flag=False
+            else:
+                position-=1
+                if position==0:flag=True
+        return position
+            
+            
