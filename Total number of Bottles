@@ -1,0 +1,8 @@
+class Solution:
+    def numWaterBottles(self, numBottles: int, numExchange: int) -> int:
+        if numBottles<numExchange:return numBottles
+        bottles=numBottles
+        while numBottles>=numExchange:
+            numBottles+=-numExchange+1
+            bottles+=1
+        return bottles
