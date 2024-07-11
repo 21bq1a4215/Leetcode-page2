@@ -1,0 +1,7 @@
+class Solution:
+    def findClosestNumber(self, nums: List[int]) -> int:
+        l=[]
+        nums=sorted(nums,reverse=True)
+        for k in nums:
+            l.append(abs(k))
+        return nums[l.index(min(l))]
